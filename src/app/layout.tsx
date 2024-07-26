@@ -1,5 +1,7 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import "@/styles";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main className="flex justify-center p-4">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
