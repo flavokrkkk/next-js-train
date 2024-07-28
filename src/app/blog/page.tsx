@@ -13,6 +13,9 @@ async function getData(): Promise<IPosts[]> {
       revalidate: 60,
     },
   });
+
+  if (!response.ok) throw new Error("Unable to fetch posts!");
+
   return response.json();
 }
 export const metaData: Metadata = {

@@ -32,7 +32,6 @@ export async function generateMetaData({
 
 const Post: FC<IPost> = async ({ params: { id } }) => {
   const post = await getData(id);
-
   return <div>Post page{post.title}</div>;
 };
 
